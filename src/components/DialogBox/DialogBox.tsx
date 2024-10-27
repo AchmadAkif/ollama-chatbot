@@ -3,7 +3,15 @@ import React from "react";
 import UserDialog from "./DialogBubble/UserDialog";
 import BotDialog from "./DialogBubble/BotDialog";
 
-type DialogBoxProps = {};
+type Message = {
+  id: string;
+  role: string;
+  content: string;
+};
+
+type DialogBoxProps = {
+  messages: Message[];
+};
 
 const DialogBox = ({ messages }: DialogBoxProps) => {
   return (
