@@ -1,18 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
-type UserInputProps = {};
+type UserInputProps = {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: () => void;
+  value: string;
+};
 
-const UserInput = (props: UserInputProps) => {
-  const [userMsg, setUserMsg] = useState<string>("");
-
+const UserInput = ({ onChange, onSubmit, value }: UserInputProps) => {
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <input
         type="text"
-        value={userMsg}
-        onChange={(e) => setUserMsg(e.target.value)}
+        value={value}
+        onChange={onChange}
         className="w-full px-4 py-4 bg-[#E1E1DD] focus:outline-none rounded-2xl font-roboto"
         placeholder="Ask anything..."
       />
