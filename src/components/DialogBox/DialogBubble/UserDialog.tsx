@@ -6,7 +6,9 @@ type UserDialogProps = {
 
 const UserDialog = ({ content }: UserDialogProps) => {
   return (
-    <div className="px-3 py-1 self-end rounded-xl bg-[#AEFF92]">{content}</div>
+    <div className="px-3 py-1 self-end rounded-xl shadow-md bg-[#AEFF92]">
+      {content}
+    </div>
   );
 };
 
