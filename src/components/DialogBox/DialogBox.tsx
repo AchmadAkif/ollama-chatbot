@@ -15,7 +15,7 @@ type DialogBoxProps = {
 
 const DialogBox = ({ messages }: DialogBoxProps) => {
   return (
-    <div className="flex flex-col px-2 py-4 font-roboto">
+    <div className="flex flex-col space-y-8 h-[calc(100%-56px)] px-2 py-4 overflow-x-hidden overflow-y-auto font-roboto">
       {messages.map((m) =>
         m.role === "assistant" ? (
           <BotDialog key={m.id} content={m.content} />

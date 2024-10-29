@@ -9,7 +9,7 @@ export default function Home() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <div className="w-full">
+    <div className="h-[100vh] w-full px-80 py-10">
       <DialogBox messages={messages} />
       <UserInput
         onChange={handleInputChange}
